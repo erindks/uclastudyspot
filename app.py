@@ -148,8 +148,10 @@ df['Final_Score'] = (1 / (1 + df['dist'])) * 100
 # bonus scores for outlets and food
 if food_on:
     df.loc[df['Food'] == 1, 'Final_Score'] += 10
+    df.loc[df['Final_Score']> 100, 'Final_Score'] = 100
 if outlets_on:
     df.loc[df['Outlets'] == 1, 'Final_Score'] += 10
+    df.loc[df['Final_Score']> 100, 'Final_Score'] = 100
 
 # RESULTS ================================================
 st.header("Step 3: Study!")
