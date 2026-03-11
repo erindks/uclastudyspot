@@ -32,7 +32,7 @@ def load_data():
     return df, vectorizer, tfidf_matrix
 df, vectorizer, tfidf_matrix = load_data()
 
-st.title("UCLA Study Spot Recommendation System")
+st.title(":blue[UCLA Study Spot Recommender]")
 
 # UPDATE SLIDERS ================================================
 # create base state for sliders
@@ -101,7 +101,7 @@ st.text_input("Search keywords to auto-set sliders",
 # PRODUCE SLIDERS AND TOGGLES ================================================
 st.header("Step 2: Adjust!")
 # noise slider
-st.subheader("Noise Level",divider="#FFD100")
+st.subheader("Noise Level",divider="yellow")
 col1, col2, col3 = st.columns([1, 4, 1])
 with col1:
     st.write("Silent")
@@ -110,7 +110,7 @@ with col2:
 with col3:
     st.write("Social")
 # aesthetic slider
-st.subheader("Aesthetic Level",divider="#FFD100")
+st.subheader("Aesthetic Level",divider="yellow")
 col1, col2, col3 = st.columns([1, 4, 1])
 with col1:
     st.write("Plain")
@@ -119,7 +119,7 @@ with col2:
 with col3:
     st.write("Instagram-able")
 # traffic slider
-st.subheader("Traffic Level",divider="#FFD100")
+st.subheader("Traffic Level",divider="yellow")
 col1, col2, col3 = st.columns([1, 4, 1])
 with col1:
     st.write("Empty")
@@ -128,7 +128,7 @@ with col2:
 with col3:
     st.write("Full")
 # outlets & food toggle
-st.subheader("Amenities",divider="#FFD100")
+st.subheader("Amenities",divider="yellow")
 col1, col2 = st.columns(2)
 with col1:
     outlets_on = st.toggle("Need outlets?",key="Outlets")
